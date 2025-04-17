@@ -3,36 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My about me</title>
+    <title>Projects</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('Backgroundindex.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+            padding: 20px;
+            border-radius: 15px; /* Smooth edges */
+            display: inline-block;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            color: #b900e7;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border: 2px solid #b900e7;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #b900e7;
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+    </style>
 </head>
-
-<style>
-    
-    nav a {
-        color: #b900e7;
-        text-decoration: none;
-    }
-
-    nav a:hover {
-        color: #0730e6;
-        text-decoration: underline;
-    }
-
-</style>
-
-<nav>
-
-    <a href="index.html">Index</a> |
-    <a href="about.html">About</a> |
-    <a href="knowledge.html">Knowledge</a> |
-    
-</nav>
-
 <body>
+    <div class="content-container">
+        <nav>
+            <a href="index.html">Index</a>
+            <a href="about.html">About</a>
+            <a href="knowledge.html">Knowledge</a>
+        </nav>
 
-    <h1>Welcome to my Projects page!</h1>
-    <p>Here i will be talking about my projects and what i am working on.</p>
-    <p>As of now i dont really have any good projects that i could post.</p>
-    <p>But right now i am planning on expanding this website until i think its great.</p>
-
-  </body>
+        <h1>Welcome to my Projects page!</h1>
+        <p>Here I will be talking about my projects and what I am working on.</p>
+        <p>As of now, I don’t really have any good projects that I could post.</p>
+        <p>But right now, I am planning on expanding this website until I think it’s great.</p>
+    </div>
+</body>
+</html>

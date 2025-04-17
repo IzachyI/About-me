@@ -4,29 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My about me</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('backgroundindex.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+            padding: 20px;
+            border-radius: 15px; /* Smooth edges */
+            display: inline-block;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            color: #b900e7;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border: 2px solid #b900e7;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #b900e7;
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+
+        .button-container {
+            margin-top: 50px;
+        }
+
+        .button-container a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .button-container a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
-<style>
-
-   nav a {
-        color: #b900e7;
-        text-decoration: none;
-    }
-
-    nav a:hover {
-        color: #0730e6;
-        text-decoration: underline;
-    }
-</style>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is my page where you can get to know me the links will show you everything about me.</p>
-    <p>This website is also a small project where i am learning about html code and hyperlinks and other stuff.</p>
-    <p>If you would like to help me fix issues that i make in my code please dm me thank you :)</p>    
-   
-    <nav>
-        <a href="about.html">About</a> |
-        <a href="knowledge.html">Knowledge</a> |
-        <a href="projects.html">Projects</a> | 
-    </nav>
+    <div class="content-container">
+        <h1>My About Me</h1>
+        <p>This is my page where you can get to know me. The links will show you everything about me.</p>
+        <p>This website is also a small project where I am learning about HTML code, hyperlinks, and other stuff.</p>
+        <p>If you would like to help me fix issues that I make in my code, please DM me. Thank you :)</p>    
+
+        <nav>
+            <a href="about.html">About</a>
+            <a href="knowledge.html">Knowledge</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </div>
 </body>
 </html>

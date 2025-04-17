@@ -3,40 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My knowledge</title>
+    <title>My Knowledge</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('Backgroundindex.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+            padding: 20px;
+            border-radius: 15px; /* Smooth edges */
+            display: inline-block;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            color: #b900e7;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border: 2px solid #b900e7;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #b900e7;
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+    </style>
 </head>
-<style>
-    nav a {
-        color: #b900e7;
-        text-decoration: none;
-    }
-
-    nav a:hover {
-        color: #0730e6;
-        text-decoration: underline;
-    }
-</style>
-<Nav>
-    <a href="index.html">Index</a> |
-    <a href="about.html">About</a> |
-    <a href="projects.html">Projects</a> |
-</Nav>
-
-<Body>
-    <h1>Welcome to my Knowledge page!</h1>
-    <p>Here i will be talking about my knowledge about programming and software developing.</p>
-</Body>
-
 <body>
-    <p>My Knowledge:</p>
-    <ul>
-        <li>Python</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>GDscript</li>
-        <li>Luau</li>
-    </ul>
-<p>In these languages i would say that i am atleast at an intermediate level of understanding.</p>
-<p>And i for sure will be expanding this list.</p>
-</body>
+    <div class="content-container">
+        <nav>
+            <a href="index.html">Index</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+        </nav>
 
+        <h1>Welcome to my Knowledge page!</h1>
+        <p>Here I will be talking about my knowledge of programming and software development.</p>
+
+        <p>My Knowledge:</p>
+        <ul>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>GDScript</li>
+            <li>Luau</li>
+        </ul>
+        <p>In these languages, I would say that I am at least at an intermediate level of understanding.</p>
+        <p>And I will definitely be expanding this list in the future.</p>
+    </div>
+</body>
+</html>

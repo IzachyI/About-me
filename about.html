@@ -3,22 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first about me.</title>
+    <title>About!</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('Backgroundindex.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+            padding: 20px;
+            border-radius: 15px; /* Smooth edges */
+            display: inline-block;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            color: #b900e7;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border: 2px solid #b900e7;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #b900e7;
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+    </style>
 </head>
-<nav>
-    <a href="index.html">Index</a> |
-    <a href="knowledge.html">Knowledge</a> |
-    <a href="projects.html">Projects</a> |
-</nav>
 <body>
-    <h1>Hi!</h1>
-    <p>As i have said in the index page this project is mostly just learning and making use of it..</p>
-    <p>I am a developer and a couple years ago i started learning luau but i have changed to start learning software development.</p>
-    <p>I have started learning GDscript because its a easier programming language but i have then switched to python.</p>
-    <p>and now i am learning html coding as i thought it would come in handy for posting my own work on very own website.</p>
-    <p>My goal is to learn as much as i can and make a career out of it.</p>
-    <p>Now it might kinda sound stupid learning every possible language there is and not focusing on one main thing.</p>
-    <p>But i still dont really know for what and why i should learn a specific language which is why im just looking around.</p>
-    <p>But i am sure that i will find something that i will like and stick to it.</p>
+    <div class="content-container">
+        <nav>
+            <a href="index.html">Index</a>
+            <a href="knowledge.html">Knowledge</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+
+        <h1>Hi!</h1>
+        <p>As I have said on the index page, this project is mostly just learning and making use of it.</p>
+        <p>I am a developer, and a couple of years ago I started learning Luau, but I have since switched to learning software development.</p>
+        <p>I started learning GDScript because it's an easier programming language, but I then switched to Python.</p>
+        <p>Now I am learning HTML coding as I thought it would come in handy for posting my own work on my very own website.</p>
+        <p>My goal is to learn as much as I can and make a career out of it.</p>
+        <p>It might sound a bit scattered, learning every possible language and not focusing on one main thing.</p>
+        <p>But I still don’t really know what and why I should learn a specific language, which is why I’m just exploring.</p>
+        <p>However, I am sure that I will find something I like and stick to it.</p>
+    </div>
 </body>
 </html>
