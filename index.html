@@ -22,16 +22,6 @@
             padding: 20px;
         }
 
-        @keyframes fadeInBackground {
-            0% {
-                background: #000
-            }
-            100% {
-                background: url('Backgroundindex.jpg') no-repeat center center fixed;
-                background-size: cover;
-            }
-        }
-
         .content-container {
             background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
             padding: 20px;
@@ -73,24 +63,66 @@
             text-decoration: none;
         }
 
-        .button-container {
-            margin-top: 50px;
-        }
-
-        .button-container a {
-            display: inline-block;
+        /* Discord Button */
+        .discord-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #7289da;
             color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            margin: 0 15px;
-            padding: 15px 30px;
-            border: 2px solid white;
+            border: none;
+            padding: 10px 20px;
             border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .button-container a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+        .discord-button:hover {
+            background-color: #5b6eae;
+        }
+
+        /* Discord Modal */
+        .discord-modal {
+            position: fixed;
+            top: 0;
+            right: -25%; /* Start off-screen */
+            width: 25%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            transition: right 0.5s ease;
+        }
+
+        .discord-modal.active {
+            right: 0; /* Slide in */
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: 2px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .discord-modal p {
+            margin: 10px 0;
+            text-align: center;
         }
     </style>
 </head>
@@ -99,7 +131,7 @@
         <h1>My About Me</h1>
         <p>This is my page where you can get to know me. The links will show you everything about me.</p>
         <p>This website is also a small project where I am learning about HTML code, hyperlinks, and other stuff.</p>
-        <p>If you would like to help me fix issues that I make in my code, please DM me. Thank you :)</p>    
+        <p>If you would like to help me fix issues that I make in my code, please DM me. Thank you. :)</p>    
 
         <nav>
             <a href="about.html">About</a>
@@ -107,5 +139,25 @@
             <a href="projects.html">Projects</a>
         </nav>
     </div>
+
+    <!-- Discord Button -->
+    <button class="discord-button" onclick="showDiscord()">Discord</button>
+
+    <!-- Discord Modal -->
+    <div class="discord-modal" id="discordModal">
+        <button class="close-modal" onclick="closeDiscord()">X</button>
+        <p>My Discord: @zachyq</p>
+        <p>(Server link will be added later)</p>
+    </div>
+
+    <script>
+        function showDiscord() {
+            document.getElementById('discordModal').classList.add('active');
+        }
+
+        function closeDiscord() {
+            document.getElementById('discordModal').classList.remove('active');
+        }
+    </script>
 </body>
 </html>
