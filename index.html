@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My about me</title>
+    <title>Index page!!!</title>
+    <link rel="preload" href="Backgroundindex.jpg" as="image">
     <style>
         /* General Reset */
         * {
@@ -14,11 +15,21 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: url('Backgroundindex.jpg') no-repeat center center fixed;
+            background: #000 url('Backgroundindex.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
             text-align: center;
             padding: 20px;
+        }
+
+        @keyframes fadeInBackground {
+            0% {
+                background: #000
+            }
+            100% {
+                background: url('Backgroundindex.jpg') no-repeat center center fixed;
+                background-size: cover;
+            }
         }
 
         .content-container {
