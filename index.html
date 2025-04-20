@@ -20,6 +20,12 @@
             color: white;
             text-align: center;
             padding: 20px;
+            opacity: 0; /* Start with opacity 0 for fade-in */
+            transition: opacity 0.5s ease; /* Add transition for fade-in and fade-out */
+        }
+
+        body.loaded {
+            opacity: 1; /* Fade in when the page is fully loaded */
         }
 
         .content-container {
@@ -62,68 +68,6 @@
             background-color: rgba(255, 255, 255, 0.2);
             text-decoration: none;
         }
-
-        /* Discord Button */
-        .discord-button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #7289da;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .discord-button:hover {
-            background-color: #5b6eae;
-        }
-
-        /* Discord Modal */
-        .discord-modal {
-            position: fixed;
-            top: 0;
-            right: -25%; /* Start off-screen */
-            width: 25%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            transition: right 0.5s ease;
-        }
-
-        .discord-modal.active {
-            right: 0; /* Slide in */
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: none;
-            border: 2px solid white;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .close-modal:hover {
-            background-color: white;
-            color: black;
-        }
-
-        .discord-modal p {
-            margin: 10px 0;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
@@ -134,29 +78,26 @@
         <p>If you would like to help me fix issues that I make in my code, please DM me. Thank you. :)</p>    
 
         <nav>
-            <a href="about.html">About</a>
-            <a href="knowledge.html">Knowledge</a>
-            <a href="projects.html">Projects</a>
+            <a href="about.html" onclick="fadeOut(event)">About</a>
+            <a href="knowledge.html" onclick="fadeOut(event)">Knowledge</a>
+            <a href="projects.html" onclick="fadeOut(event)">Projects</a>
         </nav>
     </div>
 
-    <!-- Discord Button -->
-    <button class="discord-button" onclick="showDiscord()">Discord</button>
-
-    <!-- Discord Modal -->
-    <div class="discord-modal" id="discordModal">
-        <button class="close-modal" onclick="closeDiscord()">X</button>
-        <p>My Discord: @zachyq</p>
-        <p>(Server link will be added later)</p>
-    </div>
-
     <script>
-        function showDiscord() {
-            document.getElementById('discordModal').classList.add('active');
-        }
+        // Fade-in effect when the page loads
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
 
-        function closeDiscord() {
-            document.getElementById('discordModal').classList.remove('active');
+        // Fade-out effect when a link is clicked
+        function fadeOut(event) {
+            event.preventDefault(); // Prevent the default navigation
+            const link = event.target.href; // Get the link URL
+            document.body.style.opacity = 0; // Trigger fade-out animation
+            setTimeout(() => {
+                window.location.href = link; // Navigate after animation
+            }, 500); // Match the duration of the CSS transition
         }
     </script>
 </body>

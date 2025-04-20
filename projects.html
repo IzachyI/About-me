@@ -19,6 +19,12 @@
             color: white;
             text-align: center;
             padding: 20px;
+            opacity: 0; /* Start with opacity 0 for fade-in */
+            transition: opacity 0.5s ease; /* Add transition for fade-in and fade-out */
+        }
+
+        body.loaded {
+            opacity: 1; /* Fade in when the page is fully loaded */
         }
 
         .content-container {
@@ -66,9 +72,9 @@
 <body>
     <div class="content-container">
         <nav>
-            <a href="index.html">Index</a>
-            <a href="about.html">About</a>
-            <a href="knowledge.html">Knowledge</a>
+            <a href="index.html" onclick="fadeOut(event)">Index</a>
+            <a href="about.html" onclick="fadeOut(event)">About</a>
+            <a href="knowledge.html" onclick="fadeOut(event)">Knowledge</a>
         </nav>
 
         <h1>Welcome to my Projects page!</h1>
@@ -76,5 +82,22 @@
         <p>As of now, I don’t really have any good projects that I could post.</p>
         <p>But right now, I am planning on expanding this website until I think it’s great.</p>
     </div>
+
+    <script>
+        // Fade-in effect when the page loads
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Fade-out effect when a link is clicked
+        function fadeOut(event) {
+            event.preventDefault(); // Prevent the default navigation
+            const link = event.target.href; // Get the link URL
+            document.body.style.opacity = 0; // Trigger fade-out animation
+            setTimeout(() => {
+                window.location.href = link; // Navigate after animation
+            }, 500); // Match the duration of the CSS transition
+        }
+    </script>
 </body>
 </html>
